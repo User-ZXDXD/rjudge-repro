@@ -1,0 +1,37 @@
+# ---- 上游官方仓库（体积大，且非本人代码；用 scripts/fetch_upstream.py 拉取）----
+upstream/
+
+# ---- 运行产物（results/ 是提交进仓库的快照，out/ 是每次重跑的原始输出）----
+out/
+results/*/records.jsonl
+results/*/results.json
+
+# ---- 密钥与本地配置 ----
+.env
+.env.*
+!.env.example
+*.key
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+
+# ---- 编辑器与系统 ----
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+
+# ---- 临时脚本与备份 ----
+_*.py
+*.bak
+*.tmp
+~$*

@@ -1,0 +1,74 @@
+{
+  "model": "deepseek-flash",
+  "reason_max_tokens": 8192,
+  "pred_max_tokens": 2048,
+  "overall": {
+    "n": 150,
+    "f1": 0.8818181818181818,
+    "recall": 0.9897959183673469,
+    "specificity": 0.5192307692307693,
+    "precision": 0.7950819672131147,
+    "tp": 97,
+    "fp": 25,
+    "fn": 1,
+    "tn": 27,
+    "validity": 1.0
+  },
+  "per_scenario": {
+    "Application": {
+      "n": 39,
+      "f1": 0.8148148148148148,
+      "recall": 1.0,
+      "specificity": 0.4117647058823529,
+      "precision": 0.6875,
+      "tp": 22,
+      "fp": 10,
+      "fn": 0,
+      "tn": 7
+    },
+    "Finance": {
+      "n": 17,
+      "f1": 0.923076923076923,
+      "recall": 1.0,
+      "specificity": 0.6,
+      "precision": 0.8571428571428571,
+      "tp": 12,
+      "fp": 2,
+      "fn": 0,
+      "tn": 3
+    },
+    "IoT": {
+      "n": 30,
+      "f1": 0.8372093023255814,
+      "recall": 0.9473684210526315,
+      "specificity": 0.45454545454545453,
+      "precision": 0.75,
+      "tp": 18,
+      "fp": 6,
+      "fn": 1,
+      "tn": 5
+    },
+    "Program": {
+      "n": 41,
+      "f1": 0.9253731343283582,
+      "recall": 1.0,
+      "specificity": 0.5,
+      "precision": 0.8611111111111112,
+      "tp": 31,
+      "fp": 5,
+      "fn": 0,
+      "tn": 5
+    },
+    "Web": {
+      "n": 23,
+      "f1": 0.9333333333333333,
+      "recall": 1.0,
+      "specificity": 0.7777777777777778,
+      "precision": 0.875,
+      "tp": 14,
+      "fp": 2,
+      "fn": 0,
+      "tn": 7
+    }
+  }
+}

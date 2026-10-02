@@ -1,0 +1,63 @@
+{
+  "model": "deepseek-flash",
+  "reason_max_tokens": 8192,
+  "pred_max_tokens": 2048,
+  "overall": {
+    "n": 414,
+    "f1": 0.91324200913242,
+    "recall": 1.0,
+    "specificity": 0.822429906542056,
+    "precision": 0.8403361344537815,
+    "tp": 200,
+    "fp": 38,
+    "fn": 0,
+    "tn": 176,
+    "validity": 1.0
+  },
+  "per_scenario": {
+    "Application": {
+      "n": 213,
+      "f1": 0.953405017921147,
+      "recall": 1.0,
+      "specificity": 0.8375,
+      "precision": 0.910958904109589,
+      "tp": 133,
+      "fp": 13,
+      "fn": 0,
+      "tn": 67
+    },
+    "Finance": {
+      "n": 109,
+      "f1": 0.8181818181818181,
+      "recall": 1.0,
+      "specificity": 0.8536585365853658,
+      "precision": 0.6923076923076923,
+      "tp": 27,
+      "fp": 12,
+      "fn": 0,
+      "tn": 70
+    },
+    "Program": {
+      "n": 80,
+      "f1": 0.8607594936708861,
+      "recall": 1.0,
+      "specificity": 0.7608695652173914,
+      "precision": 0.7555555555555555,
+      "tp": 34,
+      "fp": 11,
+      "fn": 0,
+      "tn": 35
+    },
+    "Web": {
+      "n": 12,
+      "f1": 0.8571428571428571,
+      "recall": 1.0,
+      "specificity": 0.6666666666666666,
+      "precision": 0.75,
+      "tp": 6,
+      "fp": 2,
+      "fn": 0,
+      "tn": 4
+    }
+  }
+}
