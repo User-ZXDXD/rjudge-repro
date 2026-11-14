@@ -14,3 +14,4 @@ for i, page in enumerate(reader.pages):
     if "74.42" in text or "Specificity" in text or "Validity" in text:
         print("=" * 20, "page", i + 1, "=" * 20)
         print(text[:4200])
+

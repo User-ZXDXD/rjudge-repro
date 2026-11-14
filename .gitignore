@@ -35,3 +35,17 @@ _*.py
 *.bak
 *.tmp
 ~$*
+
+
+# Workbench-generated reports
+.lab/
+.pytest_cache/
+*-results.xml
+
+# Optional reproduction assets and private paid-run journals
+vendor/
+benchmarks/gsafeguard/embedding_model/
+benchmarks/gsafeguard/cache/
+benchmarks/gsafeguard/runs/
+benchmarks/gsafeguard/session_control/
+benchmarks/gsafeguard/offline_check.json

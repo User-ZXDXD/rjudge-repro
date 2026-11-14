@@ -1,6 +1,6 @@
 """Minimal OpenAI-compatible chat client used by the R-Judge reproduction.
 
-Reads the API key from the local Codex config so the key never lives in this file.
+Reads RJ_API_KEY from the environment; never reads another applications credentials.
 Only uses the standard library, so no pip install is required.
 """
 import json
@@ -8,8 +8,6 @@ import os
 import time
 import urllib.error
 import urllib.request
-
-CODEX_AUTH = os.path.join(os.path.expanduser("~"), ".codex", "auth.json")
 
 BASE_URL = os.environ.get("RJ_BASE_URL", "https://api.deepseek.com")
 MODEL = os.environ.get("RJ_MODEL", "deepseek-flash")
@@ -19,12 +17,7 @@ def load_api_key():
     key = os.environ.get("RJ_API_KEY")
     if key:
         return key
-    with open(CODEX_AUTH, "r", encoding="utf-8") as fh:
-        data = json.load(fh)
-    for name in ("OPENAI_API_KEY", "api_key", "API_KEY"):
-        if data.get(name):
-            return data[name]
-    raise RuntimeError("no API key found in " + CODEX_AUTH)
+    raise RuntimeError("Set RJ_API_KEY for explicit provider authentication; Codex credentials are not read.")
 
 
 def chat(messages, model=None, max_tokens=2048, temperature=0, retries=5, timeout=300):
@@ -99,8 +92,10 @@ def chat_text(messages, model=None, max_tokens=2048, temperature=0, min_chars=1,
 if __name__ == "__main__":
     print("base_url =", BASE_URL)
     print("model    =", MODEL)
-    print("key      =", load_api_key()[:6] + "..." + " (loaded)")
+    load_api_key()
+    print("key      = configured (not displayed)")
     out = chat_text([{"role": "user", "content": "Reply with exactly: OK"}],
                     max_tokens=256)
     print("reply    =", repr(out["content"]))
     print("usage    =", out["usage"])
+

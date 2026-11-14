@@ -16,3 +16,4 @@ print("by attack_type:", dict(Counter(e.get("attack_type") for e, _ in cases)))
 print("by label:", dict(Counter(("unsafe" if e["label"] == 1 else "safe") for e, _ in cases)))
 print("by category:", dict(Counter(s for _, s in cases)))
 print("by scenario:", dict(Counter(e.get("scenario") for e, _ in cases)))
+

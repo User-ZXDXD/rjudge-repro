@@ -1,0 +1,70 @@
+{
+  "kind": "historical_derived_artifacts",
+  "new_LLM_requests": 0,
+  "sources": [
+    {
+      "source_name": "G-Safeguard/core_reproduction/parsing_adapter.py",
+      "source_sha256": "aa127983ad28a5880e617dbe8c86a74234bb41548f01811b71d8744ea4638419",
+      "published": "benchmarks/gsafeguard/parsing_adapter.py",
+      "published_sha256": "bad84d41c0aa11291b3600544b239c1a835ff51cc2af936a25bbbaa8124c489c"
+    },
+    {
+      "source_name": "G-Safeguard/core_reproduction/independent_metrics.py",
+      "source_sha256": "2211ef752d21201b35f370c3762474962f005f9788f8d63acf9be57e221d3909",
+      "published": "benchmarks/gsafeguard/independent_metrics.py",
+      "published_sha256": "0f0d7bcab1a7e84cdb7d9a0617df283f22cd0f5b970d3f584e9f7777521b3c27"
+    },
+    {
+      "source_name": "G-Safeguard/core_reproduction/graph_training.py",
+      "source_sha256": "4cdb6c9734137a031fe18330ba631bc78d0358bd5b94134fe2536d03da55a7b8",
+      "published": "benchmarks/gsafeguard/graph_training.py",
+      "published_sha256": "73c4f65950538dfa2a1d3b544e66350f5c0670575f6af844e40e20c53353c5b8"
+    },
+    {
+      "source_name": "G-Safeguard/core_reproduction/core_runner.py",
+      "source_sha256": "74676c46ff9dec9489ba2b37307bacca08444dcb8a935441aabddb917290ff59",
+      "published": "benchmarks/gsafeguard/core_runner.py",
+      "published_sha256": "4bda91b3da1f2e027dc87204af063f7daf1e1084989aa6bec02f701543c2f704"
+    },
+    {
+      "source_name": "G-Safeguard/core_reproduction/audit_completed_run.py",
+      "source_sha256": "d1ffb909a2d63000726deb27483dcfe1ac5ee34c9893d6a2b2137ff2a976840f",
+      "published": "benchmarks/gsafeguard/audit_completed_run.py",
+      "published_sha256": "9422019925da9018777011726b2b781e8c3773f43c718437e2ec680553c0676c"
+    },
+    {
+      "source_name": "R-Judge/out/deepseek-flash_unintended/records.jsonl",
+      "source_sha256": "fd0005ba9bcf7354ae838150a4cc29425fa5c3d3b174b9c650de5d1f85265b67",
+      "records": 150,
+      "publication": "labels and predictions only; prompts and goals excluded"
+    },
+    {
+      "source_name": "R-Judge/out/deepseek-flash_injection/records.jsonl",
+      "source_sha256": "84893a05dde9c266cc95d2f3c33d95e77fa1ed5c9498ddbc2acf9c31f6fdba59",
+      "records": 414,
+      "publication": "labels and predictions only; prompts and goals excluded"
+    },
+    {
+      "source_name": "G-Safeguard/core_20261106_060812_e4bffc/test_episodes.json",
+      "source_sha256": "b2e1c8f0fb0b36c09ac8bf6a1ea371b436555c3752e7919565c0e5c1a8c607aa",
+      "episodes": 64,
+      "questions": 16,
+      "publication": "derived choices and validity only; question texts, prompts, messages and credentials excluded"
+    },
+    {
+      "source_name": "G-Safeguard/independent_metrics.json",
+      "source_sha256": "fc3e12dace27809388cc2ed62eb9261a1db385f4eaf5b1463951788497e0051c"
+    }
+  ],
+  "limitations": [
+    "R-Judge model alias does not prove an exact underlying checkpoint.",
+    "G-Safeguard is a small-scale protocol-adapted reproduction, not a full numerical replication.",
+    "No evidence of defense benefit in the recorded G-Safeguard test.",
+    "Derived outcomes can be recomputed here; raw-message verification remains in the original experiment archive."
+  ],
+  "published_outcome_sha256": {
+    "rjudge_outcomes.json": "1a6f9396490c4e38d61d90f633f00e9396c3ed7ab0648bfb3567e830e333de83",
+    "gsafeguard_outcomes.json": "ea8b983d447e99a1451601494eb9b990f7850e37275776ed839bee208daa6cb3"
+  },
+  "derivation_note": "Initial attacker IDs are read from attack episodes, not the empty role list of the earlier clean condition; roles are inactive in clean views."
+}

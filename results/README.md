@@ -16,3 +16,4 @@
 `records.jsonl` 和 `results.json` 体积较大且属于逐条原始记录，已被 `.gitignore`
 排除；`analyze.py` 会从原始记录重新生成 `summary.json` 和 `analysis.md`。
 所以本目录里的文件都可以用 `out/` 里的原始记录重新算出来。
+
