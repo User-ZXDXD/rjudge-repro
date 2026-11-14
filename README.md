@@ -1,7 +1,5 @@
 # Agent Safety Lab
 
-![本地实际演示截图](docs/assets/mas-review.jpg)
-
 **智能体安全评测与实验复盘工作台**：把R-Judge风险判断和G-Safeguard多智能体防护放进同一个产品入口，保留各自的任务、分母和结论边界。
 
 本项目在原`rjudge-repro`仓库中扩展，保留其Git历史、命令行脚本、历史结果与MIT许可说明。没有把两篇论文发明成一个新防御算法，也未声称已将防护器部署到DevWeave AI。
